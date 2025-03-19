@@ -17,7 +17,8 @@ html {
  --color-nav: #A5A5A5;
 
  --color-shadow-primary: rgba(7,172,230,0.16);
-
+ --color-shadow-header: #00000029;
+ 
  --font-raleway: "Raleway", sans-serif;
  --font-open: "Open Sans", sans-serif;
 
@@ -34,37 +35,46 @@ a {
 
 /* ---HEADER--- */
 
+.header {
+  height: 70px;
+  box-shadow: 0 3px 6px var(--color-shadow-header);
+}
+
 .header__container {
   max-width: 1352px;
+  height: 100%;
   margin: 0 auto;
-  box-shadow: 0px 3px 6px #00000029;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100%;
-  
 }
 
 .header__logo {
-font-family: var(--font-raleway);
-font-size: 2rem;
-color: var(--color-primary);
-font-weight: 300;
-
+  font-family: var(--font-raleway);
+  font-size: 2rem;
+  color: var(--color-primary);
+  font-weight: 300;
 }
 
 .header__nav {
   display: flex;
   gap: 95px;
-    
 }
 
 .nav__link {
   font-family: var(--font-open);
   font-size: 11px;
-  font-weight: bold;
-  color: var(--color-nav);
-  text-transform: uppercase;
+  font-weight: 700;
   letter-spacing: 3.28px;
-  }
+  text-transform: uppercase;
+  color: var(--color-nav);
+  border-bottom: 4px solid transparent;
+  
+  padding: 26px 20px;
+}
+
+.nav__link:hover {
+  color: var(--color-black);
+  border-color: var(--color-primary);
+}
