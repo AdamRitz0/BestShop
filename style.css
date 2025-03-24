@@ -22,9 +22,13 @@ html {
  --color-card-blue:#08A6E4;
  --color-card-green: #55DFB4;
 
+ --color-button-blue: #07ACE6;
+ --color-button-red:#EB476E;
+ 
  --color-shadow-primary: rgba(7,172,230,0.16);
  --color-shadow-header: #00000029;
  --color-shadow-button: #07ACE629;
+ --color-shadow-bluebox: #07ACE629;
  
  --font-raleway: "Raleway", sans-serif;
  --font-open: "Open Sans", sans-serif;
@@ -338,7 +342,7 @@ h2 {
   margin: 70px 0%;
 }
 
-/* SAMOSTATNÁ KARTA */
+/* ---BENEFITS - SAMOSTATNÁ KARTA--- */
 .benefits__double {
   display: flex;
 }
@@ -348,7 +352,7 @@ h2 {
 }
 
 .benefits__single--solo {
-  max-width: 620px;
+  max-width: 623px;
 }
 
 .benefits__single--solo .benefits__text {
@@ -373,3 +377,133 @@ h2 {
   height: auto;
   margin-top: 55px;
 }
+
+/* ---PRICING--- */
+.pricing {
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pricing__boxes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.pricing__box {
+  width: 372px;
+  border: 1px solid var(--color-card-red);
+  border-radius: 18px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pricing__details {
+  margin-top: 34px;
+  margin-bottom: 69px;
+  text-align: center;
+}
+
+.pricing__type {
+  font-size: 1.25rem;
+  font-family: var(--font-raleway);
+  font-weight: 700;
+}
+
+.pricing__price {
+  font-size: 2.875rem;
+  font-family: var(--font-open);
+  font-weight: 300;
+  margin-top: 14px;
+  color: var(--color-card-red);
+}
+
+.pricing__limited {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 0.75rem;
+  font-family: var(--font-raleway);
+  font-weight: 700;
+}
+
+.pricing__items {
+  text-align: center;
+}
+
+.pricing__item {
+  font-family: var(--font-open);
+  font-size: 0.875rem;
+  margin-bottom: 20px;
+}
+
+.pricing__item::before {
+  content: "";
+  width: 11px;
+  height: 11px;
+  display: inline-block;
+  margin-right: 10px;
+  background-image: url(/images/Checkmark.svg);
+}
+
+.pricing__item--not::before {
+  background-image: url(/images/crossblack.svg);
+}
+
+.pricing__box .btn {
+  font-size: 0.8125rem;
+  position: relative;
+  bottom: -24px;
+  background-color: var(--color-button-blue);
+  padding: 16px 57px;
+}
+
+.pricing__box--basic .btn {
+background-color: var(--color-button-red);
+}
+
+.pricing__box--basic .pricing__price {
+  margin-bottom: 30px;
+}
+
+.pricing__box--premium {
+  border-color: var(--color-card-green);
+}
+
+.pricing__box--premium .pricing__price {
+  color: var(--color-card-green);
+}
+
+.pricing__box--premium .btn {
+  background-color:var(--color-card-green);
+}
+
+.pricing__box--professional {
+  width: 405px;
+  margin: 0 58px;
+  box-shadow: 5px 10px 27px var(--color-shadow-bluebox);
+  border-color: var(--color-button-blue);
+}
+
+.pricing__box--professional .btn {
+  padding: 16px 65px;
+}
+
+.pricing__box--professional .pricing__type {
+  font-size: 1.3125rem;
+}
+
+.pricing__box--professional .pricing__price {
+  color: var(--color-button-blue);
+}
+
+.pricing__box--professional .pricing__item {
+  margin-bottom: 25px;
+}
+
+/* ---CONTACT--- */
